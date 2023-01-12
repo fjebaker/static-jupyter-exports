@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "static-jupyter-exports"
+version = "0.1.0"
+description = ""
+authors = ["fjebaker <fergusbkr@gmail.com>"]
+readme = "README.md"
+packages = [{include = "static_jupyter_exports"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyter = "^1.0.0"
+plotly = "^5.11.0"
+numpy = "^1.24.1"
+pandas = "^1.5.2"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
