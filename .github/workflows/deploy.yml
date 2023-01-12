@@ -1,0 +1,26 @@
+name: Deploy examples
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Move examples
+        run: |
+          mkdir examples
+          mv notebooks/*.html examples
+          mv examples/simple-interactive.html examples/index.html
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: examples
