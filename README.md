@@ -13,3 +13,5 @@ jupyter nbconvert --to html --no-input notebooks/simple-interactive.ipynb
 ```
 
 I've taken the liberty of including the sample output to save having to setup the full environment.
+
+See the [examples here](https://fjebaker.github.io/static-jupyter-exports/) 👀
